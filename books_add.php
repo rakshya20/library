@@ -16,8 +16,9 @@
 <hr/>
 <form action="books_do_add.php" method="post">
     <p>Title：<input type="text" name="bname" value="<?php if(isset($_POST['bname'])) echo $_POST['bname']; ?>"></p>
-    <p>Types of：<input type="text" name="btype" value="<?php if(isset($_POST['btype'])) echo $_POST['btype']; ?>"></p>
+    <p>Category：<input type="text" name="btype" value="<?php if(isset($_POST['btype'])) echo $_POST['btype']; ?>"></p>
     <p>Quantity：<input type="text" name="bcount" value="<?php if(isset($_POST['bcount'])) echo $_POST['bcount']; ?>"></p>
+    <p>Author：<input type="text" name="bauthor" value="<?php if(isset($_POST['bauthor'])) echo $_POST['bauthor']; ?>"></p>
     <p><input type="hidden" name="bid" value="<?php if(isset($_POST['bid'])) echo $_POST['bid']; ?>"></p>
     <p><input type="submit" name="submit" value="save"><input name="Submit2" type="button" class="btn_grey" value="return" onclick="history.back();"></p>
 </form>

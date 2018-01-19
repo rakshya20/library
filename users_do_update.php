@@ -19,8 +19,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	echo "Successfully modified！";
 	echo "<a href='users_look.php'>Back to continue browsing</a>";
 	}
-	else{
-	echo "fail to edit!";
+	else	echo "fail to edit!";
     echo "<a href='users_look.php'>return</a>";
 	}
 }?>

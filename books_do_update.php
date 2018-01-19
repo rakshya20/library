@@ -11,8 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $query="update tb_books set name='$bn',author='$ba',type='$bt',count='$bc' where id='$bi'";
 	$result=mysqli_query($conn,$query);
 	if($result){
-	echo "Successfully modified！";
-	echo "<a href='books_look.php'>Back to continue browsing</a>";
+	header('Location: books_look.php');
 	}
 	else{
 	echo "fail to edit！";

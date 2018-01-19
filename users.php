@@ -10,18 +10,15 @@ $row = mysqli_fetch_assoc($result);
 
 ?>
 <html>
-	<title>Library Manager</title>
-	<center>
-		<h1>Personal Information</h1>
-		<hr/>
-		<h3><a href="books_look.php">Browse books</a>&nbsp;|&nbsp;<a href="books_query.php">Search for books</a></h3>
+	<?php
+	include ("include/header.php") ?>
 		<!-- <table border="1" width="600">
 			<tr><td>id</td><td>username</td><td>gender</td><td>age</td><td>class</td><td>Have borrowed books</td><td>Use of books</td><td>Borrow time</td><td align="center">operating</td></tr>
 			<?php 
 				echo "<tr>";
 				echo "<td>".$_SESSION['id']."</td>";
 				echo "<td>".$row['name']."</td>";
-				echo "<td>".$row['sax']."</td>";
+				echo "<td>".$row['gender']."</td>";
 				echo "<td>".$row['age']."</td>";
 				echo "<td>".$row['class']."</td>";
 				echo "<td>".$row['bbname']."</td>";

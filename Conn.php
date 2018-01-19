@@ -4,7 +4,7 @@ $conn=null;
     define("HOST","localhost");//CPU name
 	define("NAME","root");//username
 	define("PASS","");//password
-	define("DBNAME","my_library");//Database name
+	define("DBNAME","library");//Database name
     $conn = mysqli_connect(HOST,NAME,PASS,DBNAME) or die(mysqli_connect_error());     //Connect to the database
 ?>
 

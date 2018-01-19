@@ -1,5 +1,6 @@
-body{
-    background: grey;
+body {
+    background-image: url("../img/1.jpg");
+    background-repeat: no-repeat;
 }
 .form-style-8{
     float: left;

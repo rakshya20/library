@@ -32,22 +32,39 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			<tr><td>Find by type：</td><td><input type="text" name="qtype" value="<?php if(isset($_POST['qtype'])) echo $_POST['qtype']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
 		</table>
 		</form>
-		<table border="1" width="300">
-			<tr><td>id</td><td>Title</td><td>Types of</td><td>Quantity</td><td align="center">operating</td></tr>
-			<?php 
+
+		<div class="container">
+			<h2>BOOKS INFO</h2>
+		<table class="table table-hover">
+    	<thead>
+      	<tr>
+				<th>S no.</th>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Type</th>
+				<th>Quantity</th>
+				<th align="center">OPERATION</th>
+			</tr>
+    	</thead>
+    	<?php 
 			while(@$row = mysqli_fetch_assoc($result)){
 				echo "<tr>";
 				echo "<td>{$row['id']}</td>";
 				echo "<td>".$row['name']."</td>";
+				echo "<td>".$row['author']."</td>";
 				echo "<td>".$row['type']."</td>";
 				echo "<td>".$row['count']."</td>";
 				echo "<td align='center'>
-						<a href='books_do_update.php?id=".$row['id']."'>modify</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='books_delete.php?id=".$row['id']."'>delete</a>";
+						<a href='books_update.php?id=".$row['id']."'>UPDATE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='books_delete.php?id=".$row['id']."'>DELETE</a>";
 				echo "</tr>";
 			}
-			?>
+		?>
 			
-		</table>
+  </table></div>
+
+
+
+
 	</center>
 
 </html>

@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
  <?php header("Content-Type: text/html; charset=utf-8") ?>
 <center>
-	<h1>Register a new user</h1>
+	<h1>Register Here !</h1>
 	<hr/>
 	<table>
 		<form class="form-style-8" action="users_do_reg.php" method="post">

@@ -11,32 +11,36 @@ $result = mysqli_query($conn,$query);
 	<center>
 		<h1>Book list</h1>
 		<hr/>
-		<table border="1" width="700">
-			<tr>
-				<td>id</td>
-				<td>Title</td>
-				<td>Author</td>
-				<td>Type</td>
-				<td>Quantity</td>
-				<td align="center">operating</td>
+
+		<div class="container">
+			<h2>BOOKS INFO</h2>
+		<table class="table table-hover">
+    	<thead>
+      	<tr>
+				<th>S no.</th>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Type</th>
+				<th>Quantity</th>
+				<th align="center">OPERATION</th>
 			</tr>
-			<?php 
-			while($row = mysqli_fetch_assoc($result)){
+    	</thead>
+    	<?php 
+			while($row = mysqli_fetch_assoc($result))
+			{
 				echo "<tr>";
 				echo "<td>{$row['id']}</td>";
 				echo "<td>".$row['name']."</td>";
 				echo "<td>".$row['author']."</td>";
 				echo "<td>".$row['type']."</td>";
 				echo "<td>".$row['count']."</td>";
-				echo "<td align='center'>
-						<a href='books_update.php?id=".$row['id']."'>modify</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='books_delete.php?id=".$row['id']."'>delete</a>";
+				echo "<td align='center'>";
+				echo "<a href='books_update.php?id=".$row['id']."'>UPDATE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='books_delete.php?id=".$row['id']."'>DELETE</a>";
 				echo "</tr>";
 			}
-			?>
+		?>
 			
-			<a href='index.php'>Return to home page</a>&nbsp;&nbsp;&nbsp;
-			
-		</table>
+  </table>
+</div>
 	</center>
-
 </html>
