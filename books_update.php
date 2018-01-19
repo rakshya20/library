@@ -11,7 +11,7 @@
 		die("Did not find the data to be modified！");
 	}
 ?>
-
+<center><h1>LIBRARY</h1></center>
 <center>
 <title>Library Manager</title>
 <h1>Update books</h1>

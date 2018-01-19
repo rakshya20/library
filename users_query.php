@@ -1,5 +1,5 @@
-<?php header("Content-Type: text/html; charset=utf-8") ?>
 <?php 
+include ("include/header.php");
 require("Conn.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
@@ -20,27 +20,21 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	<title>library manager</title>
 	<center>
 		<h1>Search for users</h1>
-		<hr/>
-		<a href='index.php'>Return to home page</a>&nbsp;&nbsp;&nbsp;
-		<a href='manager.php'>Return to Admin Center</a>
-		<form class="form-style-8"  action="users_query.php" method="post">
-		<table>
-			<tr><td>Find by username：</td><td><input type="text" name="uname" value="<?php if(isset($_POST['uname'])) echo $_POST['uname']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
-		</table>
-		</form>
-		<form class="form-style-8" action="users_query.php" method="post">
-		<table>
-			<tr><td>Find by sex:</td><td><input type="text" name="usex" value="<?php if(isset($_POST['usex'])) echo $_POST['usex']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
-		</table>
-		</form>
+		<center><h2>BROWSE USERS</h2></center>
+
+
+
+
+		<div class="form-row">
+    	<div class="form-group col-md-6">
 		<form action="users_query.php" method="post">
 		<table>
-			<tr><td>Find by class：</td><td><input type="text" name="uclass" value="<?php if(isset($_POST['uclass'])) echo $_POST['uclass']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
+			<tr><td>Username：</td><td><input type="text" name="uname" value="<?php if(isset($_POST['uname'])) echo $_POST['uname']; ?>"></td><td><input type="submit" name="submit" value="Search"></td></tr>
 		</table>
-		</form>
-
-		<div class="container">
-			<h2>Browse Users</h2>
+		</form>	
+		</div>
+		</div>		
+		<div class="container">		 
 		<table class="table table-hover">
     	<thead>
       	<tr>
@@ -57,12 +51,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			</tr>
     	</thead>
     	<?php 
-			while($row = mysqli_fetch_assoc($result))
+			while(@$row = mysqli_fetch_assoc($result))
 			{
 				echo "<tr>";
 				echo "<td>{$row['id']}</td>";
 				echo "<td>".$row['name']."</td>";
-				echo "<td>".$row['gender']."</td>";
+				//echo "<td>".$row['gender']."</td>";
 				echo "<td>".$row['age']."</td>";
 				echo "<td>".$row['class']."</td>";
 				echo "<td>".$row['bbname']."</td>";
@@ -75,27 +69,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		?>
 			
   </table>
-</div>
-		
-		<table border="1" width="1000">
-			<tr><td>id</td><td>username</td><td>gender</td><td>age</td><td>class</td><td>Have borrowed books</td><td>Use of books</td><td>Borrow time</td><td align="center">operating</td></tr>
-			<?php 
-			while(@$row = mysqli_fetch_assoc($result)){
-				echo "<tr>";
-				echo "<td>{$row['id']}</td>";
-				echo "<td>".$row['name']."</td>";
-				echo "<td>".$row['sax']."</td>";
-				echo "<td>".$row['age']."</td>";
-				echo "<td>".$row['class']."</td>";
-				echo "<td>".$row['bbname']."</td>";
-				echo "<td>".$row['bbuseto']."</td>";
-				echo "<td>".$row['bbtime']."</td>";
-				echo "<td align='center'>
-						<a href='users_do_update.php?id=".$row['id']."'>modify</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='users_delete.php?id=".$row['id']."'>delete</a>";
-				echo "</tr>";
-			}
-			?>
-		</table>
-	</center>
-
+</div>		
+</center>
 </html>

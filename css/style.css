@@ -1,6 +1,6 @@
+
 body {
-    background-image: url("../img/1.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/6.jpg");
 }
 .form-style-8{
     float: left;
@@ -16,7 +16,7 @@ body {
 }
 
 input[type=text], input[type=password] {
-    width: 50%;
+    width: 350px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;

@@ -1,4 +1,3 @@
-<?php header("Content-Type: text/html; charset=utf-8") ?>
 <?php 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$mn=$_POST['managername'];
@@ -13,7 +12,8 @@
 
 	<title>Library Manager</title>
 	<?php
-	include ("include/header.php") ?>
-	
+	include ("include/header.php"); 
+	header('Location: books_look.php');
+	?>
 	
 </html>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Billing System</title>
+    <title>Library</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,17 +38,14 @@
                     <a class="nav-link" href="books_look.php">Browse books</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="users_look.php">Browse users</a>
-                </li>
-                <li class="nav-item active">
                     <a class="nav-link" href="books_query.php">Search for books</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="users_query.php">Search for users</a>
-                </li>
+                    <a class="nav-link" href="users_look.php">Browse users</a>
+                </li>                
                 <li class="nav-item active">
-                    <a class="nav-link" href="logout.php">Logout</a>
-                </li>
+                    <a class="nav-link" href="users_query.php">Search for users</a>
+                </li>                
             </ul>
         </div>
     </div>

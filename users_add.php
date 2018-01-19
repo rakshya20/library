@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<?php header("Content-Type: text/html; charset=utf-8") ?>
 <center>
 <title>library manager</title>
 <h1>Add user</h1>

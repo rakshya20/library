@@ -10,18 +10,18 @@ $result = mysqli_query($conn,$query);
 	<?php include ("include/header.php") ?>
 	<center>
 		<h1>Book list</h1>
-		<hr/>
+
 
 		<div class="container">
-			<h2>BOOKS INFO</h2>
+			<h2>BOOKS AVAILABLE</h2>
 		<table class="table table-hover">
     	<thead>
       	<tr>
 				<th>S no.</th>
-				<th>Title</th>
+				<th>Name</th>
 				<th>Author</th>
 				<th>Type</th>
-				<th>Quantity</th>
+				<th>Quantity<small>[available now]</small></th>
 				<th align="center">OPERATION</th>
 			</tr>
     	</thead>
@@ -44,3 +44,4 @@ $result = mysqli_query($conn,$query);
 </div>
 	</center>
 </html>
+

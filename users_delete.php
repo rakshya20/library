@@ -1,4 +1,3 @@
-<?php header("Content-Type: text/html; charset=utf-8") ?>
 <?php
 require("Conn.php");
 $id = $_GET['id'];

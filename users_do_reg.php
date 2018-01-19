@@ -18,9 +18,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	else{
 		$q="INSERT INTO tb_users (name,password)VALUES('$un','$pw')";
 		$result=mysqli_query($conn,$q);
-		echo "registration success！";
-		echo "<br/><a href='index.php'>Return to home page</a>";
-		echo "<br/><a href='users.php'>Into the personal center</a>";
-	}
+		header('location: books_look.php');
+}
 }
 ?>

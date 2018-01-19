@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<?php header("Content-Type: text/html; charset=utf-8") ?>
 <?php 
 require("Conn.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -17,19 +16,17 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 ?>
 <html>
 	<?php include ("include/header.php") ?>
-	<center>
-		<h1>Search for books</h1>
-		<hr/>
-		<a href='index.php'>Return to home page</a>&nbsp;&nbsp;&nbsp;
-		<a href='manager.php'>Return to Admin Center</a>
+	<center><br><br>
+<h1>SEARCH BOOK</h1>
+		
 		<form action="books_query.php" method="post">
 		<table>
-			<tr><td>Find by title：</td><td><input type="text" name="qname" value="<?php if(isset($_POST['qname'])) echo $_POST['qname']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
+			<tr><td>Title：</td><td><input type="text" name="qname" value="<?php if(isset($_POST['qname'])) echo $_POST['qname']; ?>"></td><td><input type="submit" name="submit" value="Search"></td></tr>
 		</table>
 		</form>
 		<form action="books_query.php" method="post">
 		<table>
-			<tr><td>Find by type：</td><td><input type="text" name="qtype" value="<?php if(isset($_POST['qtype'])) echo $_POST['qtype']; ?>"></td><td><input type="submit" name="submit" value="search for"></td></tr>
+			<tr><td>Category：</td><td><input type="text" name="qtype" value="<?php if(isset($_POST['qtype'])) echo $_POST['qtype']; ?>"></td><td><input type="submit" name="submit" value="Search"></td></tr>
 		</table>
 		</form>
 
