@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Library Manager</title>
 		<center><h1>WELCOME!</h1></center>
-		<div class="admin"><h4><a class="btn btn-primary" href="admin.php">Admin</a></h4></div>
+		<div class="admin"><h4><a class="btn btn-primary" href="admin.php">Admin rules</a></h4></div>
 		
 		<hr/>
 		<form class="form-style-8" action="users_do_login.php" method="post">
